@@ -1,10 +1,20 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'iim-web-app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: [ './app.component.css' ]
 })
 export class AppComponent {
-  title = 'app works!';
+  title;
+  count;
+
+  constructor() {
+    this.title = 'Hello World !';
+    this.count = 2;
+  }
+
+  getTitle() {
+    return this.title;
+  }
 }
