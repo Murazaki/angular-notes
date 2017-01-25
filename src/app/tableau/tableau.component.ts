@@ -36,16 +36,16 @@ export class TableauComponent {
     this.listeEleves.push(hugo);
   }
   
-  moyenneEleve(eleve: Eleve) {
+  get moyenneGlobale() {
     let somme = 0;
 
-    for(let matiere in eleve.notes) {
-      let note = parseInt(eleve.notes[matiere]);
+    for(let eleve of this.listeEleves) {
+      let moyenneeleve = parseInt(eleve.moyenne);
 
-      somme += note;
+      somme += moyenneeleve;
     }
 
-    return somme/Object.keys(eleve.notes).length;
+    return somme/this.listeEleves.length;
   }
   
   get matieres() {
