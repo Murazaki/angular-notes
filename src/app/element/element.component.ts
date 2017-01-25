@@ -1,16 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'iim-web-element',
   templateUrl: './element.component.html',
   styleUrls: ['./element.component.css']
 })
-export class ElementComponent implements OnInit {
+export class ElementComponent {
   @Input() value;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

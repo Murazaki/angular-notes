@@ -31,8 +31,25 @@ export class TableauComponent {
 
     let hugo = new Eleve('Hugo', notesHugo);
 
+    // this.listeEleves = [victor, hugo];
     this.listeEleves.push(victor);
     this.listeEleves.push(hugo);
+  }
+  
+  moyenneEleve(eleve: Eleve) {
+    let somme = 0;
+
+    for(let matiere in eleve.notes) {
+      let note = parseInt(eleve.notes[matiere]);
+
+      somme += note;
+    }
+
+    return somme/Object.keys(eleve.notes).length;
+  }
+  
+  get matieres() {
+    return Eleve.matieres;
   }
 
 }
