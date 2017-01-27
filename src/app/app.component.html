@@ -1,10 +1,8 @@
-<iim-web-tableau></iim-web-tableau>
+<button [routerLink]="['/']">Tableau</button>
+<button routerLink="/element">Element</button>
+<button routerLink="/element/1">Element 1</button>
+<button [routerLink]="['/element/2']">Element 2</button>
+<button routerLink="/element/3">Element 3</button>
 
-
-<iim-web-element [value]="'Coucou !'"></iim-web-element>
-
-<button [routerLink]="['/']">Ping !</button>
-<button [routerLink]="['/element']">Pong !</button>
-
-
+<!-- Le router-outlet sert de placeholder pour le component donné par les routes -->
 <router-outlet></router-outlet>
